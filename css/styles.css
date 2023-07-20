@@ -59,6 +59,9 @@ body {
   padding: 0 15px;
 }
 
+.header {
+  border-bottom: 1px solid #e7e9fc;
+}
 .header-div {
   display: flex;
   justify-content: space-between;
@@ -114,6 +117,7 @@ body {
 }
 .nav {
   display: flex;
+  align-items: center;
 }
 
 .nav-ul,
@@ -153,6 +157,7 @@ body {
 }
 .hero-tittle {
   margin-bottom: 48px;
+  max-width: 496px;
 
   text-align: center;
   font-size: 56px;
@@ -196,12 +201,25 @@ body {
   color: #434455;
 }
 
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
 .features {
-  padding-bottom: 0;
+  padding: 120px 0;
 }
 .features-ul {
   display: flex;
-  column-gap: 24px;
+  gap: 24px;
 }
 .features-ul:last-child {
   padding-left: 0;
@@ -213,11 +231,15 @@ body {
   display: flex;
   gap: 24px;
 }
+.doing-li {
+  flex-basis: calc((100% - 48px) / 3);
+}
 .our-team {
   background-color: #f4f4fd;
   padding: 120px 0;
 }
 .team-li {
+  flex-basis: calc((100% - 3 * 24px) / 4);
   background-color: #ffffff;
   box-shadow: 0px 2px 1px 0px rgba(46, 47, 66, 0.08),
     0px 1px 1px 0px rgba(46, 47, 66, 0.16),
@@ -231,12 +253,12 @@ body {
   text-align: center;
 }
 .team-text {
-  margin: 25px 0;
+  padding: 32px 0;
 }
 /* ================ BUTTONS ================ */
 .buttons {
-  display: inline-block;
-  border: 1px solid transparent;
+  display: block;
+  border: 1px solid #e7e9fc;
   border-radius: 4px;
   padding: 12px 24px;
 
@@ -269,22 +291,25 @@ body {
   border-color: #e7e9fc;
 }
 
-.buttons.btn-hero {
-  padding: 16px 32px;
+.btn-hero {
+  display: block;
+  /* padding: 16px 32px; */
+  border: none;
   border-radius: 4px;
   min-width: 169px;
+  height: 56px;
 
   background: #4d5ae5;
   color: #ffffff;
 }
-.buttons.btn-hero:hover {
+.btn-hero:hover {
   cursor: pointer;
   background-color: #404bbf;
 }
-.buttons.btn-hero:focus {
+.btn-hero:focus {
   background-color: #404bbf;
 }
-.buttons.btn-hero:active {
+.btn-hero:active {
   background-color: #404bbf;
 }
 /* ================ PORTFOLIO ONLY ================ */
@@ -298,10 +323,17 @@ body {
   margin-bottom: 72px;
 }
 .cards {
+  width: calc((100% - 48px) / 3);
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
   column-gap: 24px;
+}
+.cards-div {
+  padding: 32px 16px;
+  border: 1px solid #e7e9fc;
+  border-top: none;
+  margin-bottom: 8px;
 }
 
 .port-subhead {
@@ -319,7 +351,7 @@ body {
 /* ================ FOOTER ================ */
 .footer {
   background-color: #2e2f42;
-  padding: 120px 0;
+  padding: 100px 0;
 }
 .studio-footer {
   color: #f4f4fd;
