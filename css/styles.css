@@ -349,6 +349,7 @@ body {
 
 .port-li {
   border: 1px solid #e7e9fc;
+  width: calc((100% - 48px) / 3);
 }
 /* ================ FOOTER ================ */
 .footer {
