@@ -276,11 +276,13 @@ body {
   text-align: center;
 }
 .buttons:hover {
+  border: 1px solid transparent;
   color: #ffffff;
   background-color: #404bbf;
   cursor: pointer;
 }
 .buttons:focus {
+  border: 1px solid transparent;
   color: #ffffff;
   background-color: #404bbf;
 }
