@@ -325,7 +325,6 @@ body {
   margin-bottom: 72px;
 }
 .cards {
-  width: calc((100% - 48px) / 3);
   display: flex;
   flex-wrap: wrap;
   row-gap: 48px;
@@ -338,17 +337,7 @@ body {
   margin-bottom: 8px;
 }
 
-.port-subhead {
-  margin-top: 32px;
-  padding: 0 16px;
-}
-.port-text {
-  margin-bottom: 32px;
-  padding: 0 16px;
-}
-
 .port-li {
-  border: 1px solid #e7e9fc;
   width: calc((100% - 48px) / 3);
 }
 /* ================ FOOTER ================ */
